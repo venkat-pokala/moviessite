@@ -4,17 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Movieswood</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>🎬 Movieswood</h1>
-    <input type="text" id="searchInput" placeholder="Search for a movie..." />
+    <h1>🎬 MoviesWeb</h1>
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search for a movie..." />
+      <ul id="suggestionsList" class="hidden"></ul>
+    </div>
     <button onclick="searchMovie()">Search</button>
+    <button id="homeBtn">🏠 Home</button>
+    <select id="genreSelect">
+      <option value="">All Genres</option>
+    </select>
+    <button id="modeToggle">🌙 Toggle Mode</button>
   </header>
 
   <main id="movieContainer"></main>
-
   <section id="movieDetails" class="hidden"></section>
 
   <script src="script.js"></script>
